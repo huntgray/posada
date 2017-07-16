@@ -1,0 +1,46 @@
+extends layout
+
+block content
+
+  ul(class="rslides")
+    li
+      img(id="slideshow_img1", src="slideshow-images/banner_01.jpg")
+    li
+      img(id="slideshow_img2", src="slideshow-images/banner_02.jpg")
+    li
+      img(id="slideshow_img3", src="slideshow-images/banner_03.jpg")
+
+  p As a Lake Worth, FL Real Estate Attorney, I take a genuine interest in my client’s real estate needs. I work hard to provide superior legal services on a timely, effective and efficient basis.
+  p 
+    b
+      | Call me now to discuss your real estate legal options at 
+      a(href="tel:+1-561-251-4993") 561-251-4993
+      | !
+
+  
+
+//-   include author
+//-   each article in articles
+//-     article.article.intro
+//-       header
+//-         p.date
+//-           span= moment.utc(article.date).format('DD. MMMM YYYY')
+//-         h2
+//-           a(href=article.url)= article.title
+//-       section.content
+//-         | !{ typogr(article.intro).typogrify() }
+//-         if article.hasMore
+//-           p.more
+//-             a(href=article.url) more
+
+//- block prepend footer
+//-   div.nav
+//-     if prevPage
+//-       a(href=prevPage.url) « Newer
+//-     else
+//-       a(href='/archive.html') « Archives
+//-     if nextPage
+//-       a(href=nextPage.url) Next page »
+
+
+

@@ -1,0 +1,73 @@
+{
+  "locals": {
+    "url": "http://localhost:8080",
+    "name": "Christian D. Posada, P.A.",
+    "job_title": "Attorney-At-Law",
+    "owner": "Christian D. Posada, P.A.",
+    "description": "lawposada.com",
+    "sitemap": "sitemap.xml",
+    "noindex": "false",
+    "real_estate": {
+    	"point1": "General Real Estate Law Questions",
+    	"point2": "Buying Property",
+    	"point3": "Selling Property",
+    	"point4": "Real Estate Contract Questions",
+    	"point5": "Home Foreclosure Questions",
+    	"point6": "General Mortgage Foreclosure Questions",
+    	"point7": "Real Estate Law Disputes"
+    },
+    "estate_planning_probate": {
+    	"point1": "Understanding the Estate Planning Process",
+    	"point2": "Understanding the Probate Process",
+    	"point3": "Estate Planning Tools",
+    	"point4": "Asset Protection Techniques",
+    	"point5": "Wills",
+    	"point6": "Trusts",
+    	"point7": "Avoiding Probate",
+    	"point8": "Dealing with Creditors",
+    	"point9": "Distributing Assets"
+    },
+    "landlord_tenant": {
+    	"point1": "Landlord Tenant Questions",
+    	"point2": "Eviction Questions",
+    	"point3": "Eviction Process",
+    	"point4": "Landlord Rights",
+    	"point5": "Tenant Rights",
+    	"point6": "Lease Agreements",
+    	"point7": "Lease Disputes"
+    },
+    "consumer_law": {
+    	"point1": "Consumer Law Questions",
+    	"point2": "Consumer Disputes",
+    	"point3": "Credit Card Disputes",
+    	"point4": "Contract Disputes",
+    	"point5": "Collection Law Disputes",
+    	"point6": "Identity Theft Issues",
+    	"point7": "Fraud Issues",
+    	"point8": "Deceptive Practices",
+    	"point9": "Consumer Misrepresentations",
+    	"point10": "Unfair Dealings"
+    }
+  },
+  "plugins": [
+    "./plugins/paginator.coffee",
+    "wintersmith-livereload",
+    "wintersmith-contents",
+    "wintersmith-robots"
+  ],
+  "require": {
+    "moment": "moment",
+    "_": "underscore",
+    "typogr": "typogr"
+  },
+  "jade": {
+    "pretty": true
+  },
+  "markdown": {
+    "smartLists": true,
+    "smartypants": true
+  },
+  "paginator": {
+    "perPage": 3
+  }
+}
