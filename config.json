@@ -51,6 +51,7 @@
   },
   "plugins": [
     "./plugins/paginator.coffee",
+    "./node_modules/wintersmith-coffee",
     "wintersmith-livereload",
     "wintersmith-contents",
     "wintersmith-robots"

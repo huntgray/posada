@@ -25,9 +25,7 @@ html(lang='en')
       div.content-wrap
         block header
           h1.tagline 
-            | Lake Worth FL Real Estate Attorney
-            br 
-            a.header_phone(href="tel:+1-561-251-4993") 561-251-4993
+            span Lake Worth Real Estate &amp; Probate Attorney
           div.logo
             a(href='/posada/index.html')
               img(src='cdp-icon.jpg')
@@ -35,8 +33,9 @@ html(lang='en')
               div
                 span.span-break.bottom-border= locals.name
                 span.span-break.caps= locals.job_title
-            // p.description= locals.description
-            // a.main_phone(href="tel:+1-561-251-4993") CALL NOW
+          div.header_phone
+            span Call Now
+            a(href="tel:+1-561-251-4993") 561-251-4993
           include nav
     div#content
       div.content-wrap
@@ -53,24 +52,19 @@ html(lang='en')
                 div
                   span.span-break.bottom-border= locals.name
                   span.span-break.caps= locals.job_title
-            !=contents['phone.md'].html
+            a.footer_phone(href="tel:+1-561-251-4993") 561-251-4993
           section.copy
             p &copy; #{ new Date().getFullYear() } #{ locals.owner }, All Rights Reserved. | The hiring of a lawyer is an important decision that should not be based solely upon advertisement.
             p 
               ul 
-                li lake worth fl real estate law,
-                li lake worth fl real estate lawyer,
-                li lake worth fl real estate attorney,
-                li lake worth fl real estate law firm,
-                li lake worth fl estate planning lawyer, 
-                li lake worth fl estate planning attorney, 
-                li lake worth fl probate lawyer, 
-                li lake worth fl probate attorney, 
-                li lake worth fl probate law firm, 
-                li lake worth fl probate law firms, 
-                li lake worth fl landlord tenant disputes,
-                li lake worth fl landlord tenant laws, 
-                li lake worth fl consumer law attorney, 
-                li lake worth fl consumer law practice
+                li lake worth real estate attorney,
+                li lake worth real estate lawyer,
+                li.li_break lake worth probate attorney,
+                li lake worth probate lawyer,
+                li lake worth estate planning attorney,
+                li lake worth estate planning lawyer,
+                li lake worth landlord-tenant disputes,
+                li lake worth consumer law attorney,
+                li lake worth consumer law lawyer
     
     script(src="js/nav_hider.js", type="text/javascript")

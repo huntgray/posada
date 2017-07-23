@@ -11,11 +11,21 @@ module.exports = function(grunt){
 				src: 'contents/js/responsiveslides.js',
 				dest: 'contents/js/responsiveslides.min.js'
 			}
+		},
+		coffee: {
+			compile: {
+				files: {
+					'/js/coffee.js': '/js/coffee.coffee'
+				}
+			}
 		}
 	
 	});
 	
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.registerTask('default', ['uglify']);
+	
+	grunt.loadNpmTasks('grunt-contrib-coffee');
+	grunt.registerTask('default', ['coffee']);
 
 }

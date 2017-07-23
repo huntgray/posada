@@ -29,13 +29,17 @@ a:hover {
   text-decoration: none;
 }
 
+b {
+  font-family: Merriweather, serif;
+}
+
 p {
   margin: 30px 0;
 }
 
 h1 {
-  font-size: 1.5em;
-  margin: 40px 0;
+  font-size: 18px;
+  margin: 40px 0 20px;
 }
 
 h2 {
@@ -86,9 +90,24 @@ hr {
 /* page header */
 
 .content-wrap h1.tagline {
-	float: right;
-	text-align: right;
-	margin-top: -10px;
+	top: 0;
+	left: 0;
+	width: 100%;
+	margin-top: 0px;
+	position: absolute;
+	padding: 3px 0 2px;
+	background-color: #19244b;
+}
+
+.content-wrap h1.tagline span {
+	width: 100%;
+	color: white;
+	display: block;
+	margin: 0 auto;
+	font-size: 10px;
+	max-width: 960px;
+	text-align: center;
+	text-transform: uppercase;
 }
 
 .header {
@@ -110,7 +129,9 @@ hr {
 }
 
 div.logo {
+	width: 100%;
   margin-top: 40px;
+  display: block;
 }
 
 div.logo img {
@@ -133,16 +154,17 @@ div span.span-break:first-of-type {
 	color: #546A7B;
 }
 
-a.header_phone {
-	font-family: "Roboto", sans-serif;
+div.header_phone {
+	width: 100%;
+	text-align: center;
+	display: block;
+	margin-top: 20px;
+	font-family: Merriweather, serif;
 }
 
-.main_phone {
-  margin: 30px 0 10px;
-}
-
-.main_phone a {
-  color: rgba(0, 110, 0, 1);
+.header_phone a {
+	font-size: 40px;
+	display: block;
 }
 
 #nav_menu, .main_phone {
@@ -181,7 +203,7 @@ nav ul li {
 }
 
 ul.list_of_services {
-	margin: 80px 0 0 65px;
+	margin: 30px 0 0 25px;
 }
 
 ul.list_of_services li {
@@ -189,7 +211,7 @@ ul.list_of_services li {
 }
 
 .content-wrap {
-  width: 40%;
+  width: 90%;
   margin: 0 auto;
   display: block;
 }
@@ -202,10 +224,31 @@ ul.list_of_services li {
 
 .header-rule {
 	display: inline-block;
-	width: 25%;
+	width: 5%;
 	height: 2px;
 	background-color: #19244b;
-	margin: 0 20px;
+	margin: 0 5px;
+	display: none;
+}
+
+.scales {
+	font-size: 16px;
+}
+
+ul.crumbs {
+	font-size: 10px;
+	margin-left: 25px;
+	display: none;
+	list-style-type: none;
+}
+
+ul.crumbs li {
+	letter-spacing: 0.1em;
+	display: inline-block;
+}
+
+li.current_crumb {
+	text-decoration: underline;
 }
 
 /* slideshow */
@@ -223,11 +266,11 @@ ul.resources {
 }
 
 ul.resources h2 {
-	margin-top: 60px;
+	margin-top: 0;
 }
 
 ul.resources li a {
-	font-size: 16px;
+	font-size: 10px;
 }
 
 
@@ -259,8 +302,11 @@ footer .about {
   font-size: 1.7em;
 }
 
-footer .about h1 {
-    margin: 0;
+footer .about .footer_phone {
+  font-size: 40px;
+  display: block;
+  margin: 20px 0 0 0;
+  font-family: Merriweather, serif;
 }
 
 footer .copy {
@@ -283,10 +329,16 @@ footer ul li {
 	margin: 1px 1px;
 }
 
+.li_break {
+	display: block;
+}
+
 /* media queries */
 
 @media (min-width: 480px) {
-
+	.li_break {
+		display: inline;
+	}
 }
 
 @media (min-width: 690px) {
@@ -301,10 +353,12 @@ footer ul li {
     font-size: 1.4em;
     margin-bottom: 0.6em;
   }
-  .header .description {
-    font-size: 1em;
-  }
-
+  .header-rule {
+		display: inline-block;
+	}
+	h1 {
+	  font-size: 26px;
+	}
   footer .nav {
     margin: 1em 0;
   }
@@ -323,22 +377,74 @@ footer ul li {
 }
 
 @media (min-width: 900px) {
-  body { font-size: 18px; }
+  body { 
+  	font-size: 18px; 
+  }
+  h1 {
+	  margin: 40px 0;
+	}
+  .header-rule {
+		width: 25%;
+		margin: 0 20px;
+		display: none;
+	}
+  .content-wrap h1.tagline span {
+		font-size: 12px;
+		text-align: right;
+	}
   .content-wrap {
     max-width: 960px;
+  	margin: 0 auto;
+  	display: block;
+	}
+  #nav_menu {
+  	display: none;
   }
-  #nav_menu {display: none;}
   .content-wrap nav {
     display: block;
     margin-top: 10px;
-  }
-  nav ul {
-    
   }
   nav ul li {
     display: inline-block;
     margin: 30px 10px 0;
   }
+  div.logo {
+	width: 50%;
+  margin-top: 40px;
+  display: inline-block;
+	}
+	div.logo img {
+  	max-width: 60px;
+	  vertical-align: text-bottom;
+	}
+	div.logo div {
+  	font-family: "Roboto", sans-serif;
+	  color: #19244b;
+	  font-size: 20px;
+  	display: inline-block;
+	}
+	div.header_phone {
+		width: 49%;
+		text-align: right;
+		display: inline-block;
+		margin-top: 0;
+	}
+	div.header_phone span {	
+		padding-right: 5px;
+	}
+	ul.crumbs {
+		display: block;
+	}
+	ul.list_of_services {
+		margin-top: 80px;
+		margin-left: 65px;
+	}
+	ul.resources li a {
+		font-size: 16px;
+	}
+	ul.resources h2 {
+		margin-top: 60px;
+	}
 }
 
 
